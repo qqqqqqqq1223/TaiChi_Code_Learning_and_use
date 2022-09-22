@@ -11,17 +11,11 @@ f = ti.field(dtype=ti.f32,shape=())
 # Taichi能够编译的 Taichi scope
 @ti.kernel
 def hello_taichi():
-    time_start = time.time()
     f[None] = 0.0
     print('Hello Taichi')
-    time_end = time.time()
-    print('Running time:{} seconds'.format(time_start - time_end))
 
 # Python编译
 def hello_pyrhon():
-    time_start = time.time()
     print('Hello Python')
-    time_end = time.time()
-    print('Running time:{} seconds'.format(time_start - time_end))
 hello_taichi()
 hello_pyrhon()
