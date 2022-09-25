@@ -1,7 +1,7 @@
-## 测试使用Taichi加速的效果
+## 测试使用Taichi加速的效果(普通)
 """Count the prime numbers in the range [1, n]
 """
-
+import time
 # Checks if a positive integer is a prime number
 def is_prime(n: int):
     result = True
@@ -23,5 +23,7 @@ def count_primes(n: int) -> int:
            count += 1
 
     return count
-
+time_start = time.time()
 print(count_primes(1000000))
+time_end = time.time()
+print(time_end - time_start)
