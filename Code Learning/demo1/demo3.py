@@ -1,7 +1,7 @@
 # 使用Taichi加速
 import taichi as ti
 import time
-ti.init(arch=ti.cpu)
+ti.init(arch=ti.gpu)
 @ti.func
 def is_prime(n: int):
     result = True
